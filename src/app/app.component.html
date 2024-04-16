@@ -1,0 +1,65 @@
+<div class="container mt-2">
+  <h3>List of Person</h3>
+  <div class="d-flex justify-content-end">
+    <button type="button" class="btn btn-primary" (click)="openModal('add')">Add Person Details</button>
+  </div><br>
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Age</th>
+        <th scope="col">Avtar</th>
+        <th scope="col">Country</th>
+        <th scope="col">Action</th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of personDetails">
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.email }}</td>
+        <td>{{ calculateAge(item.dateOfBirth) || '-' }}</td>
+        <td>{{ item.avtar }}</td>
+        <!-- <td><img [src]="item.avtar" alt="image" style="width:50px;height:50px"></td> -->
+        <td>{{ item.country }}</td>
+        <td><i class="fas fa-edit" (click)="openModal('update', item)" style="color:blue"></i>
+          <i class="fas fa-trash-alt" (click)="delete(item.id)" style="color:red"></i></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{{ modalTitle }}</h5>
+        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="personForm">
+          <label for="name" class="col-sm-2 col-form-label">Name</label>
+          <input type="text" class="form-control" id="name" formControlName="name">
+          <label for="email" class="col-sm-2 col-form-label">Email</label>
+          <input type="email" class="form-control" id="email" formControlName="email">
+          <label for="datebirth" class="col-sm-4 col-form-label">Date of Birth</label>
+          <input type="date" class="form-control" id="datebirth" formControlName="dateOfBirth">
+          <label for="avtar" class="col-sm-2 col-form-label">Avtar</label>
+          <input type="file" class="form-control" id="avtar" formControlName="avtar" 
+          accept="image/*" >
+          
+          
+          <label for="country" class="col-sm-2 col-form-label">Country</label>
+          <input type="text" class="form-control" id="country" formControlName="country"><br>
+        </form>
+      </div>
+      <div class="d-flex justify-content-end  m-2 ">
+        <button type="button" class="btn btn-secondary" (click)="close()">Close</button>
+        <button type="button" class="btn btn-primary ms-3" (click)="submit()" data-bs-dismiss="modal">Save</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,65 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "name": "sonali",
+      "email": "sonali123@gmail.com",
+      "dateOfBirth": "20-3-2000",
+      "avtar": "https://st5.depositphotos.com/35914836/64906/i/450/depositphotos_649066108-stock-photo-pink-flowers-park-spring-bloosom.jpg",
+      "country": "india"
+    },
+    {
+      "id": 5,
+      "name": "Ashok",
+      "email": "rutujasathe2003@gmail.com",
+      "dateOfBirth": "2024-04-26",
+      "avtar": "C:\\fakepath\\ecommerce.jpg",
+      "avatarName": "C:\\fakepath\\ecommerce.jpg",
+      "country": "India"
+    },
+    {
+      "id": 6,
+      "name": "cfasf",
+      "email": "asfaf",
+      "dateOfBirth": "2024-04-13",
+      "avtar": "C:\\fakepath\\ecommerce.jpg",
+      "country": "dcasd"
+    },
+    {
+      "id": 9,
+      "name": "Kajal",
+      "email": "abc@gmail.com",
+      "dateOfBirth": "2000-04-08",
+      "avtar": "C:\\fakepath\\hp.jpg",
+      "country": "India"
+    },
+    {
+      "id": 10,
+      "name": "sdfdsgdfgs",
+      "email": "asdsfsdf@gmail.com",
+      "dateOfBirth": "1999-06-03",
+      "avtar": "C:\\fakepath\\ecommerce.jpg",
+      "country": "tyrtt"
+    },
+    {
+      "id": 11,
+      "name": "Rutuja Sathe",
+      "email": "rutujasathe2003@gmail.com",
+      "dateOfBirth": "2024-04-18",
+      "avtar": "C:\\fakepath\\ecommerce.jpg",
+      "country": "India"
+    },
+    {
+      "id": 12,
+      "name": "Rutuja Sathe",
+      "email": "rutujasathe2003@gmail.com",
+      "dateOfBirth": null,
+      "avtar": "C:\\fakepath\\hp.jpg",
+      "country": "India"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
